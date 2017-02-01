@@ -5,8 +5,13 @@ package jp.ac.uryukyu.ie.e165746;
  */
 public class Main {
     public static void main(String[] args) {
-        Cardstock stock = new Cardstock();
+        Master start1 = new Master();
+        Player start2 = new Player();
 
-        stock.deck();
+        System.out.println("Master's deck");
+        start1.play();
+
+        System.out.println("\nPlayer's deck");
+        start2.play();
     }
 }
