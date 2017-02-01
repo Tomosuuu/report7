@@ -16,7 +16,6 @@ public class Cardstock{
     int[] A = new int[5];
     int[] B = new int[5];
     int[] C = new int[5];
-    int[] D = new int[5];
 
     String[] suit= {"Spade","Heart","Diamond","Clover","Joker"};
     //String[] suit= {"♠️","♡","♢","♣️","Joker"};
@@ -48,6 +47,19 @@ public class Cardstock{
                 System.out.println(suit[A[p] / 13] + "の" + (A[p] % 13 + 1));
             }
             B[p] = A[p]%13+1;  //Bはカードの数字が格納されている。
+        }
+    }
+
+    /**
+     * 数字だけを見てソートさせるメゾット。
+     */
+    public void number_sort(){
+        if (A[4]/13 == 4){ //最後のカードがjokerの時はそれ以外のカードをソートさせる。
+            A=B;
+            insertionsort(0,3);
+        }else {
+            A=B;
+            insertionsort(0,4);
         }
     }
 

@@ -13,5 +13,13 @@ public class Main {
 
         System.out.println("\nPlayer's deck");
         start2.play();
+
+        if (start1.num>start2.num){
+            System.out.println("\nlose");
+        }else if (start1.num == start2.num){
+            System.out.println("\nDraw");
+        }else {
+            System.out.println("\nwin");
+        }
     }
 }

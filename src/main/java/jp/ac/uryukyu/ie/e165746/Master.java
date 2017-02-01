@@ -7,10 +7,13 @@ package jp.ac.uryukyu.ie.e165746;
 /**
  * マスターのクラス。
  */
-public class Master extends Cardstock{
+public class Master extends Game{
     public void play(){
         make_deck();
         A = Master_deck;
         deck_sort();
+        C = A;
+        number_sort();
+        card_check();
     }
 }

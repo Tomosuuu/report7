@@ -7,10 +7,13 @@ package jp.ac.uryukyu.ie.e165746;
 /**
  * プレイヤーのクラス。
  */
-public class Player extends Cardstock{
+public class Player extends Game{
     public void play(){
         make_deck();
         A = Player_deck;
         deck_sort();
+        C = A;
+        number_sort();
+        card_check();
     }
 }
