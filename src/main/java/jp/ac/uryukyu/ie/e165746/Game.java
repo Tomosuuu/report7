@@ -3,8 +3,16 @@ package jp.ac.uryukyu.ie.e165746;
 /**
  * Created by e165746 on 2017/01/25.
  */
+
+/**
+ * 役を判断するクラス。
+ */
 public class Game extends Cardstock{
     int num = 0;
+
+    /**
+     * ジョーカーがある時とない時で役を判断して関数を呼び出すメゾット。
+     */
     public void card_check(){
         if (A[4] == 1){
             is_jocker();
@@ -12,6 +20,10 @@ public class Game extends Cardstock{
             not_jocker();
         }
     }
+
+    /**
+     * ジョーカーがある時に役を判断するメゾット。
+     */
     public void is_jocker(){
         if (A[0] == A[1] && A[0] == A[2] && A[0] == A[3]) {
             num = 10;
@@ -38,6 +50,10 @@ public class Game extends Cardstock{
         }
         part_check();
     }
+
+    /**
+     * ジョーカーがない時に役を判断するメゾット。
+     */
     public void not_jocker() {
         if (A[0] == A[1] && A[0] == A[2] && A[0] == A[3]) {
             num = 7;
@@ -67,6 +83,10 @@ public class Game extends Cardstock{
         part_check();
     }
 
+    /**
+     * 役の名前を出力するメゾット。
+     * is_joker()もしくはnot_joker()によってnumに数字が入り、ここで出力する内容を判断している。
+     */
     public void part_check(){
         switch (num){
             case 0:

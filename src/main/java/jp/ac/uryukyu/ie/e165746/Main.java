@@ -14,6 +14,7 @@ public class Main {
         System.out.println("\nPlayer's deck");
         start2.play();
 
+        //役が強い方が勝ち、同じならドロー
         if (start1.num>start2.num){
             System.out.println("\nlose");
         }else if (start1.num == start2.num){
