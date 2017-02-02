@@ -21,7 +21,7 @@ public class Cardstock{
     //String[] suit= {"♠️","♡","♢","♣️","Joker"};
 
     /**
-     * シャッフルされた手札を表示するメゾット。
+     * シャッフルされた手札を表示すメソッド。
      */
     public void make_deck() {
         for (int i = 0; i < 53; i++) {
@@ -35,7 +35,7 @@ public class Cardstock{
     }
 
     /**
-     * スートが強く、数字が小さい順で手札を表示させるメゾット。
+     * スートが強く、数字が小さい順で手札を表示させメソッド。
      */
     public void deck_sort() {
         insertionsort(0,4);
@@ -51,7 +51,7 @@ public class Cardstock{
     }
 
     /**
-     * 数字だけを見てソートさせるメゾット。
+     * 数字だけを見てソートさせメソッド。
      */
     public void number_sort(){
         if (A[4]/13 == 4){ //最後のカードがjokerの時はそれ以外のカードをソートさせる。
@@ -64,7 +64,7 @@ public class Cardstock{
     }
 
     /**
-     * 数字を小さい順にソートするメゾット。
+     * 数字を小さい順にソートすメソッド。
      * @param p
      * @param q
      */
@@ -83,7 +83,7 @@ public class Cardstock{
     }
 
     /**
-     * 山札をシャッフルするメゾット。
+     * 山札をシャッフルすメソッド。
      */
     public void shuffle() {
         for (int t = 1; t <= 200; t++) {
@@ -94,7 +94,7 @@ public class Cardstock{
         }
     }
     /**
-     * card[i]のcard[j]位置を入れ替えるメゾット。
+     * card[i]のcard[j]位置を入れ替えるメソッド。
      * @param i
      * @param j
      */

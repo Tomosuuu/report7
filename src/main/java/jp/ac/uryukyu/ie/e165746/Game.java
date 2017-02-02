@@ -11,7 +11,7 @@ public class Game extends Cardstock{
     int num = 0;
 
     /**
-     * ジョーカーがある時とない時で役を判断して関数を呼び出すメゾット。
+     * ジョーカーがある時とない時で役を判断して関数を呼び出すメソッド。
      */
     public void card_check(){
         if (A[4] == 1){
@@ -22,7 +22,7 @@ public class Game extends Cardstock{
     }
 
     /**
-     * ジョーカーがある時に役を判断するメゾット。
+     * ジョーカーがある時に役を判断するメソッド。
      */
     public void is_jocker(){
         if (A[0] == A[1] && A[0] == A[2] && A[0] == A[3]) {
@@ -52,7 +52,7 @@ public class Game extends Cardstock{
     }
 
     /**
-     * ジョーカーがない時に役を判断するメゾット。
+     * ジョーカーがない時に役を判断するメソッド。
      */
     public void not_jocker() {
         if (A[0] == A[1] && A[0] == A[2] && A[0] == A[3]) {
@@ -84,7 +84,7 @@ public class Game extends Cardstock{
     }
 
     /**
-     * 役の名前を出力するメゾット。
+     * 役の名前を出力するメソッド。
      * is_joker()もしくはnot_joker()によってnumに数字が入り、ここで出力する内容を判断している。
      */
     public void part_check(){
