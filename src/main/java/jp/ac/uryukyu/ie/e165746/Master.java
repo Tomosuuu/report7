@@ -12,8 +12,6 @@ public class Master extends Game{
         make_deck();
         A = Master_deck;
         deck_sort();
-        C = A;
-        number_sort();
-        card_check();
+        card_check(card_number);
     }
 }

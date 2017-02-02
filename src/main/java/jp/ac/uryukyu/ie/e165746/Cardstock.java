@@ -3,7 +3,7 @@ package jp.ac.uryukyu.ie.e165746;
 import java.util.Arrays;
 
 /**
- * Created by e165746 on 2017/01/24.
+ * Breated by e165746 on 2017/01/24.
  */
 
 /**
@@ -13,9 +13,9 @@ public class Cardstock{
     int[] card = new int[54];
     int[] Player_deck = new int[5];
     int[] Master_deck = new int[5];
+    int[] card_number = new int[5];
     int[] A = new int[5];
     int[] B = new int[5];
-    int[] C = new int[5];
 
     String[] suit= {"Spade","Heart","Diamond","Clover","Joker"};
     //String[] suit= {"♠️","♡","♢","♣️","Joker"};
@@ -46,8 +46,10 @@ public class Cardstock{
             }else{
                 System.out.println(suit[A[p] / 13] + "の" + (A[p] % 13 + 1));
             }
-            B[p] = A[p]%13+1;  //Bはカードの数字が格納されている。
+            card_number[p] = A[p]%13+1;  //card_number// はカードの数字が格納されている。
         }
+        B = A;
+        number_sort();
     }
 
     /**
@@ -55,10 +57,10 @@ public class Cardstock{
      */
     public void number_sort(){
         if (A[4]/13 == 4){ //最後のカードがjokerの時はそれ以外のカードをソートさせる。
-            A=B;
+            A = card_number;
             insertionsort(0,3);
         }else {
-            A=B;
+            A = card_number;
             insertionsort(0,4);
         }
     }
