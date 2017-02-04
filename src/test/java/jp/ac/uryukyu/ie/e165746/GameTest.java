@@ -17,8 +17,8 @@ public class GameTest {
         start.A[1] = 12;
         start.A[2] = 0;
         start.A[3] = 9;
-        start.A[4] = 11;
-        start.deck_sort();
+        start.A[4] = 52;
+        start.deck_sort(start.A);
         start.card_check(start.card_number);
     }
 

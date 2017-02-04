@@ -9,9 +9,7 @@ package jp.ac.uryukyu.ie.e165746;
  */
 public class Master extends Game{
     public void play(){
-        make_deck();
-        A = Master_deck;
-        deck_sort();
+        deck_sort(Master_deck);
         card_check(card_number);
     }
 }

@@ -21,7 +21,7 @@ public class Cardstock{
     //String[] suit= {"♠️","♡","♢","♣️","Joker"};
 
     /**
-     * シャッフルされた手札を表示すメソッド。
+     * シャッフルされた手札を表示するメソッド。
      */
     public void make_deck() {
         for (int i = 0; i < 53; i++) {
@@ -35,25 +35,27 @@ public class Cardstock{
     }
 
     /**
-     * スートが強く、数字が小さい順で手札を表示させメソッド。
+     * スートが強く、数字が小さい順で手札を表示させるメソッド。
      */
-    public void deck_sort() {
+    public void deck_sort(int[] Deck) {
+        make_deck();
+        A = Deck;
         insertionsort(0,4);
         for(int p=0; p<5; p++){
-            String ke = suit[A[p] / 13];
-            if (A[p] / 13 == 4){
+            String ke = suit[Deck[p] / 13];
+            if (Deck[p] / 13 == 4){
                 System.out.println(ke);
             }else{
-                System.out.println(suit[A[p] / 13] + "の" + (A[p] % 13 + 1));
+                System.out.println(suit[Deck[p] / 13] + "の" + (Deck[p] % 13 + 1));
             }
-            card_number[p] = A[p]%13+1;  //card_number// はカードの数字が格納されている。
+            card_number[p] = Deck[p]%13+1;  //card_number// はカードの数字が格納されている。
         }
-        B = A;
+        B = Deck;
         number_sort();
     }
 
     /**
-     * 数字だけを見てソートさせメソッド。
+     * 数字だけを見てソートさせるメソッド。
      */
     public void number_sort(){
         if (A[4]/13 == 4){ //最後のカードがjokerの時はそれ以外のカードをソートさせる。
@@ -66,7 +68,7 @@ public class Cardstock{
     }
 
     /**
-     * 数字を小さい順にソートすメソッド。
+     * 数字を小さい順にソートするメソッド。
      * @param p
      * @param q
      */
@@ -85,7 +87,7 @@ public class Cardstock{
     }
 
     /**
-     * 山札をシャッフルすメソッド。
+     * 山札をシャッフルするメソッド。
      */
     public void shuffle() {
         for (int t = 1; t <= 200; t++) {
