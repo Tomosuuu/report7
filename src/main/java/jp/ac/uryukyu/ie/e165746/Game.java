@@ -53,7 +53,7 @@ public class Game extends Cardstock{
      * ジョーカーがない時に役を判断するメソッド。
      */
     public void not_joker(int[] A) {
-        if (A[0] == A[1] && A[0] == A[2] && A[0] == A[3]) {
+        if (A[0] == A[1] && A[0] == A[2] && A[0] == A[3] || A[1] == A[2] && A[2] == A[3] && A[3] == A[4]) {
             num = 7; //フォーカード
         } else if ((A[0] == A[1] && A[0] == A[2] && A[3] == A[4]) || (A[0] == A[1] && A[2] == A[3] && A[2] == A[4])) {
             num = 6; //フルハウス
